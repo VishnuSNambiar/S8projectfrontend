@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var http = require('http');
+const session = require('express-session');
 var upload = require("express-fileupload");
 app.use(upload());
 
@@ -35,7 +36,3 @@ app.post("/",function(req,res){
 
 
 
-
-
-
-module.exports = app;
