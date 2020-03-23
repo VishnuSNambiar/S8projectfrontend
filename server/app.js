@@ -18,7 +18,7 @@ app.get("/",function(req,res){
 app.post("/",function(req,res){
     if(req.files){
         var file = req.files.filename,
-            filename = req.files.filename;
+            filename = file.name;
         file.mv("./upload/"+filename,function(err){
             if(err){
                 console.log(err);
